@@ -2,3 +2,14 @@
     border: 1px solid black;
    margin-top: 20px;
 }
+
+.container {
+    overflow: hidden;
+}
+.column {
+    float: left;
+    margin: 20px;
+    background-color: grey;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+}

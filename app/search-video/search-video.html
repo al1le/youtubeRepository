@@ -1,0 +1,24 @@
+<div class="form-inline">
+    Search : <input type="text"  class="form-control" name="" ng-model="youtube" value="{{youtube}}" ng-change="youtubeSearch(youtube)" />
+    Display n first result : <input type="number"  class="form-control" ng-model="limit" min="1" max="5"/>
+    <div class="row result">
+        <div class="col-md-12 overflow">
+            <div ng-repeat="video in videos | limitTo : limit">
+                <ul class="list-group">
+                    <li class="list-group-item ">
+                        <div class="video-list media">
+                            <div class="media-left">
+                                <img class="media-object" src="{{video.snippet.thumbnails.default.url}}" />
+                            </div>
+                            <div class="media-body">
+                                <input type="text"  class="form-control video-title" ng-model="video.snippet.title"/>
+                                <button class="btn btn-primary" ng-click="addTolibrary(video)">+</button>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

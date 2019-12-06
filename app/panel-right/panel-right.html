@@ -1,3 +1,19 @@
 <div class="panelRight">
-    Panel right
+    <div ng-hide="addingVideo">
+        <div class="titleVideo">
+            {{ library.videos[selectedVideo].title }}
+        </div>
+        <div ng-show="url !== ''" class="playVideo">
+            <iframe
+                    width="560" height="315"
+                    ng-src="{{url}}"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    <div ng-show="addingVideo" ng-controller="searchVideoController">
+        <search-video></search-video>
+    </div>
+
 </div>

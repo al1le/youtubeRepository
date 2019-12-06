@@ -4,8 +4,13 @@
             {{library.name}}
         </div>
         <div class="addVideo">
-            <button class="btn btn-primary">+</button>
+            <button class="btn btn-primary" ng-click="add()">+</button>
         </div>
+
+        <div ng-repeat="video in library.videos" class="panel-left-video" ng-click="playVideo($index)">
+            {{video.title}} <button class="btn btn-danger" ng-click="removeVideo($index)">X</button>
+        </div>
+
 
     </div>
 

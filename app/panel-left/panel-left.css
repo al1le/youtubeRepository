@@ -12,9 +12,22 @@
      border: 1px solid black;
      font-size: 14px;
      margin-top: 10px;
+     text-align: center;
 }
 
 .addVideo {
     margin-top : 10px;
     text-align: center;
+}
+
+.panel-left-video {
+    cursor: pointer;
+    border: 1px solid black;
+    margin-top : 10px;
+    background-color: #2fff95;
+    padding: 10px;
+}
+
+.panel-left-video:hover {
+    background-color: #59ff2f;
 }
