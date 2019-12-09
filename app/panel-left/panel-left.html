@@ -1,18 +1,16 @@
 <div class="panelLeft">
-    <div class="contentPanelLeft">
-        <div class="title">
-            {{library.name}}
-        </div>
-        <div class="addVideo">
-            <button class="btn btn-primary" ng-click="add()">+</button>
-        </div>
-
-        <div ng-repeat="video in library.videos" class="panel-left-video" ng-click="playVideo($index)">
-            {{video.title}} <button class="btn btn-danger" ng-click="removeVideo($index)">X</button>
-        </div>
-
-
+    <div class="title">
+        {{library.name}}
+    </div>
+    <div class="addVideo">
+        <button class="btn btn-primary" ng-click="add()">+</button>
     </div>
 
+    <div class="filter">
+        <input type="text" class="col-md-12" ng-model="filter"/>
+    </div>
 
+    <div ng-repeat="video in library.videos | filter:{title:filter}" class="panel-left-video col-md-12" ng-click="playVideo($index)">
+        {{video.title}} <button class="btn btn-danger" ng-click="removeVideo($index)">X</button>
+    </div>
 </div>

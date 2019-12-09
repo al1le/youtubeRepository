@@ -1,18 +1,17 @@
 .panelLeft {
-    border: 1px solid black;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.contentPanelLeft {
-    padding: 20px;
 }
 
 .title {
      border: 1px solid black;
      font-size: 14px;
-     margin-top: 10px;
      text-align: center;
+}
+
+.filter {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .addVideo {

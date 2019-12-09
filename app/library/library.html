@@ -1,9 +1,17 @@
 
-<div class="content col-md-12">
-    <div ng-controller="panelLeftController" class="col-md-4">
-        <panel-left></panel-left>
+<div class="content container col-md-12">
+    <div class="row">
+        <div ng-controller="panelLeftController" class="col-md-4">
+            <div class="border">
+                <panel-left></panel-left>
+            </div>
+        </div>
+        <div ng-controller="panelRightController" class="col-md-8">
+            <div class="border">
+                <panel-right></panel-right>
+            </div>
+
+        </div>
     </div>
-    <div ng-controller="panelRightController" class="col-md-8">
-        <panel-right></panel-right>
-    </div>
+
 </div>

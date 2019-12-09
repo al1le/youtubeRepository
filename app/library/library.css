@@ -1,15 +1,20 @@
 .content {
-    border: 1px solid black;
    margin-top: 20px;
 }
 
-.container {
-    overflow: hidden;
+.border {
+    border: 1px solid black;
+    height: 100%;
+    padding: 20px;
 }
-.column {
-    float: left;
-    margin: 20px;
-    background-color: grey;
-    padding-bottom: 100%;
-    margin-bottom: -100%;
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+.row > [class*='col-'] {
+	 display: flex;
+	 flex-direction: column;
 }
